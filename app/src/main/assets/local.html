@@ -1,0 +1,26 @@
+<html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.link').on('click', function(event){
+                event.stopPropagation();
+                if (window.Android) {
+                    window.Android.sendData(JSON.stringify({key:'value'}));
+                } else {
+                    //fallback to branch
+                    window.location = 'https://i2rl.app.link/VwWKOwpAS6';
+                }
+
+        });
+    });
+    </script>
+    <body>
+        <h1>Test</h1>
+        <ul>
+            <li><a class="link" href="#">JS Bridge data pass</a></li>
+            <li><a href="https://i2rl.app.link/VwWKOwpAS6">Branch IO link</a></li>
+            <li><a href="https://fitnice.page.link/?link=https://example.com?key=value&apn=com.scopic.jsdatapass&afl=https://example.com&efr=1">Firebase dynamic link</a></li>
+        </ul>
+    </body>
+</html>
